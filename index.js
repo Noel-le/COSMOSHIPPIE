@@ -16,21 +16,19 @@ const toggle = (e) =>{
         e.classList.remove('default')
         e.classList.add('change')
         e.src = './img/change.png'
+        audioPlay();
     }else{
         e.classList.add('default')
         e.classList.remove('change')
         e.src = './img/person.png'
+        audioPlay();
     }
 }
 
 const audioPlay = () => { 
     var audio = document.getElementById('audio_play');
     audio.currentTime = 0
-    if (audio.paused) {
-        audio.play(); 
-    }else{
-        audio.play(); 
-    }
+    audio.play();
 } 
 
 
@@ -51,7 +49,6 @@ const createNewPage = () =>{
         $cnt.innerHTML = addCount($cnt.innerHTML)
         count+=1
         toggle($img)
-        audioPlay()
     }
     return $contents
 }
