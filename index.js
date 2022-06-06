@@ -6,36 +6,24 @@ const $contents = get('.contents')
 const $btn = get('.btn')
 const $main = get('.main')
 
-
 const addCount = (e) =>{
     var result = Number(e)+1
     return result
 }
-
 
 const toggle = (e) =>{
     if (e.classList[0] === 'default'){
         e.classList.remove('default')
         e.classList.add('change')
         e.src = './img/change.png'
-        audioPlay();
     }else{
         e.classList.add('default')
         e.classList.remove('change')
         e.src = './img/person.png'
-        audioPlay();
     }
 }
 
-const audioPlay = () => { 
-    var audio = document.getElementById('audio_play');
-    audio.currentTime = 0
-    audio.play();
-} 
-
-
 let count = 0
-
 const createNewPage = () =>{
     $contents.innerHTML = `
     <div class="main">
@@ -56,20 +44,20 @@ const createNewPage = () =>{
     </h1>
     <ol>
         <li>
-            <p class = 'username'>Jerry Wood</c>
-            <p class = 'score' >3100000000000000000005</p>
+            <p class = 'username' id = '1'>Jerry Wood</c>
+            <p class = 'score' >3100000000000005</p>
+        </li>
+        <li>
+            <p class = 'username' id = '2'>Jerry Wood</c>
+            <p class = 'score' >30033015</p>
+        </li>
+        <li>
+            <p class = 'username' id = '3'>Jerry Wood</c>
+            <p class = 'score' >12331005</p>
         </li>
         <li>
             <p class = 'username'>Jerry Wood</c>
-            <p class = 'score' >300015</p>
-        </li>
-        <li>
-            <p class = 'username'>Jerry Wood</c>
-            <p class = 'score' >31005</p>
-        </li>
-        <li>
-            <p class = 'username'>Jerry Wood</c>
-            <p class = 'score' >3105</p>
+            <p class = 'score' >563105</p>
         </li>
         <li>
             <p class = 'username'>Jerry Wood</c>
@@ -155,8 +143,6 @@ const createNewPage = () =>{
 
 $btn.onclick = function(){
     createNewPage()
-    console.log($leaderboard)
-    
 }
 
 const renderAllScores = () =>{
