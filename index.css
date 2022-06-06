@@ -286,6 +286,7 @@ Leaderboard
     border-radius: 10px;
     box-shadow: 0 7px 30px rgba(62, 9, 11, 0.3);
     overflow-y: scroll;
+    overflow-x: hidden;
 }
 
 .leaderboard h1 {
@@ -389,93 +390,27 @@ Leaderboard
     margin-right: 40px;
 }
 
-.leaderboard ol li::after {
-    content: "";
-    position: absolute;
-    z-index: 1;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background: #abfca5;
-    box-shadow: 0 3px 0 rgba(0, 0, 0, 0.08);
-    transition: all 0.3s ease-in-out;
-    opacity: 0;
-}
-
 .leaderboard ol li:nth-child(1) {
-    background: #30f0d4;
-}
-
-.leaderboard ol li:nth-child(1)::after {
-    background: #abfca5;
+    background: #f51353;
 }
 
 .leaderboard ol li:nth-child(2) {
-    background: #4C9AE8;
-}
-
-.leaderboard ol li:nth-child(2)::after {
-    background: #abfca5;
-    box-shadow: 0 2px 0 rgba(0, 0, 0, 0.08);
-}
-
-.leaderboard ol li:nth-child(2) .username::before,
-.leaderboard ol li:nth-child(2) .username::after {
-    border-top: 6px solid #ba4741;
-    bottom: -7px;
+    background: #EF5350;
 }
 
 .leaderboard ol li:nth-child(3) {
-    background: #8567EF;
-}
-
-.leaderboard ol li:nth-child(3)::after {
-    background: #abfca5;
-    box-shadow: 0 1px 0 rgba(0, 0, 0, 0.11);
-}
-
-.leaderboard ol li:nth-child(3) .username::before,
-.leaderboard ol li:nth-child(3) .username::after {
-    border-top: 2px solid #b0433f;
-    bottom: -3px;
+    background: #E57373;
 }
 
 .leaderboard ol li:nth-child(4) {
-    background: #C62EF8;
-}
-
-.leaderboard ol li:nth-child(4)::after {
-    background: #abfca5;
-    box-shadow: 0 -1px 0 rgba(0, 0, 0, 0.15);
-}
-
-.leaderboard ol li:nth-child(4) .username::before,
-.leaderboard ol li:nth-child(4) .username::after {
-    top: -7px;
-    bottom: auto;
-    border-top: none;
-    border-bottom: 6px solid #a63d3d;
+    background: #EF9A9A;
 }
 
 .leaderboard ol li:nth-child(5) {
-    background: #fc00ff;
+    background: #FFCDD2;
     border-radius: 0 0 10px 10px;
 }
 
-.leaderboard ol li:nth-child(5)::after {
-    background: #abfca5;
-    box-shadow: 0 -2.5px 0 rgba(0, 0, 0, 0.12);
-    border-radius: 0 0 10px 10px;
-}
-
-.leaderboard ol li:nth-child(5) .username::before,
-.leaderboard ol li:nth-child(5) .username::after {
-    top: -9px;
-    bottom: auto;
-    border-top: none;
-    border-bottom: 8px solid #993639;
-}
 
 .leaderboard ol li:hover {
     z-index: 2;
