@@ -305,7 +305,7 @@ Leaderboard
 .arrowToggle{
     display: flex;
     float: right;
-    width: 35px
+    width: 5%;
 }
 
 .leaderboard ol {
