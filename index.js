@@ -59,7 +59,7 @@ const createNewPage = () =>{
     $contents.innerHTML = `
     <div class="main">
     <h2>COSMOSHIPPIE to COSMOS</h2>
-    <p class = "count">999999</p>
+    <p class = "count">0</p>
     <img class = "default" src="./img/person.png">
     </div>
     <footer>
