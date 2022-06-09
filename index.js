@@ -11,10 +11,27 @@ const addCount = (e) =>{
     return result
 }
 
+const endGame = () => {
+    if(window.confirm("Thanks, game is end. This is my gift for your effort. If you want to download it, click confirm button.")){    
+        const $format = get('.count')
+        $format.innerHTML = `
+        <div>
+            <a href="./img/specialGift.png" download><button class="down_btn"> Download </button></a>
+        </div>
+        `
+
+    }else{
+        window.location.reload()
+    }
+}
+
 const toggle = (e) =>{
     let $count = get('.count') 
     if (e.classList[0] === 'default'){
-        if (Number($count.innerHTML) >= 100000){
+        if (Number($count.innerHTML >= 1000000)){
+            e.src = './img/specialGift.png'
+            endGame(e);
+        }else if (Number($count.innerHTML) >= 100000){
             e.src = './img/100000.png'
         }else if(Number($count.innerHTML) >= 50000){
             e.src = './img/50000.png'
@@ -44,11 +61,10 @@ const createNewPage = () =>{
         <a href="https://www.youtube.com/channel/UCpFDSAscLYsC25tTp7q-CQg"><img class = "youtube" src="./img/youtube.png"> Youtube</a>
         <a href="https://www.instagram.com/cosmoshippie/?hl=ko"><img class = "instagram" src="./img/insta.png"> Instagram</a>
     </footer>
-
     `
+
     const $img = get('.default')
     const $cnt = get('.count')
-
 
     $img.onclick = () => {
         $cnt.innerHTML = addCount($cnt.innerHTML)
@@ -61,4 +77,5 @@ const createNewPage = () =>{
 $btn.onclick = function(){
     createNewPage()
 }
+
 
