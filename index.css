@@ -227,7 +227,20 @@ h2{
 }
 
 .btn:hover{
-    background-color: rgb(201, 41, 41);
+    background-color: rgb(186, 243, 116);
+}
+
+.down_btn{
+    font-size: 30px;
+    font-weight: 600;
+    margin: 10px;
+    margin-bottom: 40px;
+    padding: 10px;
+    background-color: rgb(143, 255, 135);
+    color: rgb(0, 0, 0);
+    border-radius: 10px;
+    border: none;   
+
 }
 
 .disabled {
