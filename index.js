@@ -37,10 +37,12 @@ const toggle = (e) =>{
             e.src = './img/50000.png'
         } else if (Number($count.innerHTML) >= 10000){
             e.src = './img/10000.png'
-        } else {
+        } else if (Number($count.innerHTML) >= 0) {
             e.classList.remove('default')
             e.classList.add('change')
             e.src = './img/change.png'    
+        }else{
+            window.location.reload()
         }
     }else{
         e.classList.add('default')
