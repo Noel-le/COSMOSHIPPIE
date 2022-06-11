@@ -57,6 +57,15 @@ const toggle = (e) =>{
 let count = 0
 const createNewPage = () =>{
     $contents.innerHTML = `
+    <head>
+    <!-- Global site tag (gtag.js) - Google Analytics -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-DCGETV7529"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-DCGETV7529');
+    </script>
     <div class="main">
     <h2>COSMOSHIPPIE to COSMOS</h2>
     <p class = "count">0</p>
