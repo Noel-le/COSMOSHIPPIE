@@ -84,6 +84,14 @@ const createNewPage = () =>{
         $cnt.innerHTML = addCount($cnt.innerHTML)
         count+=1
         toggle($img)
+        
+        if (Number($cnt.innerHTML) % 2 === 1){
+        $cnt.classList.remove('even')
+        $cnt.classList.add('odd')
+        }else{
+        $cnt.classList.remove('odd')
+        $cnt.classList.add('even')
+        }
     }
     return $contents
 }
