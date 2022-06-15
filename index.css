@@ -257,7 +257,25 @@ h2{
 .count{
     font-size: 8em;
     font-weight: 600;
+    text-shadow: 15px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
 }
+
+.odd{
+    font-size: 9em;
+    font-weight: 600;
+    transform: rotate(8deg);
+    text-shadow: 15px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+}
+
+.even{
+    font-size: 9em;
+    font-weight: 600;
+    transform: rotate(-9deg);
+    text-shadow: 15px 0 #000, 0 1px #000, 1px 0 #000, 0 -1px #000;
+
+}
+
 
 footer {
     text-align: center;
