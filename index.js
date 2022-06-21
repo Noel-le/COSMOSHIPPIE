@@ -30,17 +30,18 @@ const endGame = () => {
     }
 }
 
+
 const toggle = (e) =>{
     let $count = get('.count') 
     if (e.classList[0] === 'default'){
-        if (Number($count.innerHTML >= 1000000)){
+        if (Number($count.innerHTML >= 10000)){
             e.src = './img/specialGift.png'
             endGame(e);
-        }else if (Number($count.innerHTML) >= 100000){
+        }else if (Number($count.innerHTML) >= 1000){
             e.src = './img/100000.png'
-        }else if(Number($count.innerHTML) >= 50000){
+        }else if(Number($count.innerHTML) >= 500){
             e.src = './img/50000.png'
-        } else if (Number($count.innerHTML) >= 10000){
+        } else if (Number($count.innerHTML) >= 100){
             e.src = './img/10000.png'
         } else {
             e.classList.remove('default')
@@ -53,6 +54,7 @@ const toggle = (e) =>{
         e.src = './img/person.png'
     }
 }
+
 
 let count = 0
 const createNewPage = () =>{
